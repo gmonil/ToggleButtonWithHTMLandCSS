@@ -1,0 +1,43 @@
+.toggleMainContainer {
+	display: inline-block;
+}
+.toggleMainContainer .circle {
+	-webkit-transition: 0.3s cubic-bezier(0, 1.1, 1, 1.1);
+	transition: 0.3s cubic-bezier(0, 1.1, 1, 1.1);
+	-webkit-transition-property: background-color, transform;
+	transition-property: background-color, transform;
+	position: absolute;
+	display: block;
+	width: 67px;
+	height: 27px;
+	border-radius: 27px;
+	background-color: #fff;
+	top: 10px;
+	left: 10px;
+	line-height: 25px;
+	text-align: center;
+}
+.toggleMainContainer .slideSpace {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 140px;
+	height: 31px;
+	border: solid 2px #808080;
+	border-radius: 20px;
+	background-color: #808080;
+	cursor: pointer;
+	pointer-events: none;
+}
+.toggleMainContainer input {
+	display: none;
+}
+.toggleMainContainer input:checked + .slideSpace {
+	border-color: #009688;
+	background-color: #009688;
+}
+.toggleMainContainer input:checked + .slideSpace .circle {
+	-webkit-transform: translate3d(68px, 0, 0);
+	transform: translate3d(68px, 0, 0);
+	background-color: #fff;
+	top: 10px;
+}
